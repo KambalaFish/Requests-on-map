@@ -1,0 +1,22 @@
+@use "@styles/abstracts/_functions.scss" as f;
+@use "@styles/abstracts/_mixins.scss" as m;
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  @include m.solidBorder(f.ptr(8px), rgba(23 122 236 / 70%));
+
+  border-right-color: transparent;
+  border-radius: 50%;
+  width: f.ptr(52px);
+  aspect-ratio: 1/1;
+  animation: rotation 0.8s linear 0s infinite both;
+}

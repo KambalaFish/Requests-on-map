@@ -1,0 +1,33 @@
+@use "@styles/abstracts/_mixins.scss" as m;
+@use "@styles/abstracts/_functions.scss" as f;
+@use "@styles/abstracts/_variables.scss" as v;
+
+.map {
+  @include m.flexColumn(space-between);
+
+  &Body {
+    width: 100%;
+    height: 90%;
+  }
+
+  &Info {
+    @include m.flex(center);
+
+    column-gap: f.ptr(8px);
+    height: 10%;
+    width: 100%;
+
+    &Error {
+      background-color: rgb(232 32 32);
+    }
+  }
+
+  &Message {
+    font-size: f.ptr(20px);
+    color: v.$sBlack2;
+
+    &Error {
+      color: rgb(255 255 255);
+    }
+  }
+}

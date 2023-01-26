@@ -1,0 +1,5 @@
+@use "@styles/abstracts/mixins" as m;
+@include m.googleFont("Roboto");
+// @include m.googleFont("Montserrat");
+// @include m.googleFont("BhuTuka+Expanded+One");
+// @include m.googleFont("Oswald");

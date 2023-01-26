@@ -1,0 +1,46 @@
+@use "@styles/abstracts/_mixins.scss" as m;
+@use "@styles/abstracts/_functions.scss" as f;
+@use "@styles/abstracts/_variables.scss" as v;
+
+.table {
+  display: table;
+  border-collapse: collapse;
+  width: 75%;
+
+  &Caption {
+    font-size: f.ptr(18px);
+    margin: 0 0 f.ptr(8px) f.ptr(64px);
+    width: max-content;
+  }
+
+  &Cell {
+    $borderHead: 2px solid v.$pBlack;
+    $borderData: 2px solid v.$sBlack5;
+
+    border: $borderData;
+    text-align: center;
+    padding: f.ptr(8px);
+
+    &Head {
+      border: $borderHead;
+      width: 14ch;
+      text-align: left;
+      vertical-align: top;
+      padding: f.ptr(8px) f.ptr(12px) f.ptr(8px) f.ptr(4px);
+    }
+
+    &Id {
+      text-align: left;
+      padding-left: f.ptr(8px);
+    }
+  }
+
+  &Row {
+    cursor: pointer;
+
+    &Chosen {
+      background-color: darkcyan;
+      color: rgb(255 255 255);
+    }
+  }
+}

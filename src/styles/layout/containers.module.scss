@@ -1,0 +1,27 @@
+@use "@styles/abstracts/_mixins.scss" as m;
+@use "@styles/abstracts/_functions.scss" as f;
+
+.appcontainer {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  grid: {
+    template: {
+      columns: 45fr 55fr;
+      areas: "table map";
+    }
+  }
+
+  justify-items: center;
+  align-items: center;
+
+  &Table {
+    grid-area: table;
+  }
+
+  &Map {
+    grid-area: map;
+    width: 80%;
+    height: 80%;
+  }
+}
